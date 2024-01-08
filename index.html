@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@200&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+    <style>
+        @import 'utilities.css';
+
+        :root {
+            --primary: rgb(29, 221, 189);
+            --bgDark: rgb(0, 0, 0);
+            /* Changed to black */
+            --white: rgb(250, 250, 250);
+            --secondary: rgb(0, 59, 50);
+            --bgLight: rgb(190, 181, 181);
+        }
+
+        body {
+            background-color: var(--bgDark);
+            /* Set the background color for the entire body */
+        }
+
+        header {
+            background-color: var(--bgDark);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 73% 94%, 0 100%);
+        }
+
+        .hero .left img {
+            width: 400px;
+            border-radius: 50%;
+            /* Rounded the profile image */
+            overflow: hidden;
+            background: black;
+            /* Background color */
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            background-color: var(--bgDark);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 73% 94%, 0 100%);
+        }
+
+        header nav .left a {
+            color: var(--white);
+            text-decoration: none;
+            margin-right: 2rem;
+            text-transform: uppercase;
+            transition: all .2s ease;
+        }
+
+        header nav .left a:hover {
+            color: var(--primary);
+        }
+
+        header nav {
+            padding: 2rem 0;
+        }
+
+        header nav .logo {
+            margin-right: 3rem;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            max-width: 1152px;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            padding-top: 2rem;
+            padding-bottom: 3rem;
+        }
+
+        .hero .left img {
+            width: 400px;
+        }
+
+        .hero .right {
+            color: var(--white);
+            margin-top: -7rem;
+        }
+
+        .hero .right h6 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .right h1 {
+            font-size: 4rem;
+            font-weight: 100;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        .hero .right h1 span {
+            color: var(--primary);
+        }
+
+        .hero .right p {
+            line-height: 1.9;
+            margin-bottom: 2rem;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .items-centre {
+            align-items: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-right {
+            justify-content: right;
+        }
+
+        .btn {
+            padding: 0.6rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 2px solid transparent;
+            outline: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all .2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--secondary);
+            margin-top: -15rem;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .flex-1 {
+            flex: 1;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--secondary);
+        }
+
+        section {
+            padding: 6rem;
+        }
+
+        section.about h1 {
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--primary);
+            /* Added primary color */
+        }
+
+        section.about h1 span {
+            color: var(--primary);
+        }
+
+        section.about h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        section.about p {
+            font-family: 'Lato', sans-serif;
+            color: var(--white);
+            /* Changed to white */
+            line-height: 1.9rem;
+            margin-bottom: 2rem;
+        }
+
+        section.about .socials {
+            display: flex;
+        }
+
+        section.about .socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            margin-right: 0.8rem;
+            border-radius: 50%;
+        }
+
+        section.about .socials a:hover {
+            background: var(--primary);
+        }
+
+        section.services {
+            background: rgb(17, 17, 17)
+        }
+
+        .services-head {
+            color: rgb(10, 9, 9);
+            text-align: center;
+            margin-bottom: 1rem;
+            line-height: 0.5rem;
+            color: var(--primary);
+        }
+
+        .services-head+p {
+            color: var(--white);
+            font-family: 'Lato', sans-serif;
+            margin-bottom: 1rem;
+            text-align: center;
+            margin-bottom: 6rem;
+            font-weight: 400;
+        }
+
+        .card img {
+            width: 50px;
+            background: white;
+        }
+
+        section.services .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 2rem;
+        }
+
+        section.services .card-grid .card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            position: relative;
+            text-align: center;
+            transition: all .2s ease;
+        }
+
+        section.services .card-grid .card img {
+            position: absolute;
+            top: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--primary);
+        }
+
+        section.services .card-grid .card h2 {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            /* Added primary color */
+        }
+
+        section.services .card-grid .card p {
+            font-family: 'Lato', sans-serif;
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        section.services .card-grid .card:hover {
+            background: var(--primary);
+        }
+
+        section.services .card-grid .card:hover h2 {
+            color: var(--white);
+        }
+
+        section.services .card-grid .card:hover p {
+            color: var(--white);
+        }
+
+        section.contact {
+            background: var(--bgDark);
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        section.contact h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            /* Added primary color */
+        }
+
+        section.contact p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="flex items-centre justify-between">
+                <div class="left flex justfiy-right">
+                    <div>
+                        <a href="#">Home</a>
+                        <a href="#about">About</a> <!-- Added IDs for navigation -->
+                        <a href="#services">Services</a>
+                        <a href="#">Blog</a></li>
+                        <a href="#">More</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <button class="btn btn-primary">Contact</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="hero flex items-centre justify-between">
+        <div class="left flex-1 justify-center">
+            <img src="WhatsApp Image 2023-10-08 at 3.04.06 PM.jpeg" alt="Profile">
+        </div>
+        <div class="right flex-1">
+            <h6>Hassan Jabbar</h6>
+            <h1>I'm a Web<br> <span>Developer</span></h1>
+            <div>
+                <button class="btn btn-secondary">DOWNLOAD CV</button>
+            </div>
+        </div>
+    </div>
+    <section class="about" id="about"> <!-- Added ID for navigation -->
+        <div class="container flex items-centre">
+            <div class="right flex-1">
+                <h1>About <span>Me</span></h1>
+                <p>Hi, I'm Hassan Jabbar, a passionate web developer with a strong background in creating dynamic and
+                    interactive websites. I love turning ideas into reality through coding and design. My goal is to
+                    deliver exceptional user experiences and bring digital visions to life. With a blend of creativity
+                    and technical skills, I strive to build meaningful web experiences that leave a lasting impression.
+                    Let's collaborate and bring your ideas to the digital world!</p>
+                <div class="socials">
+                    <a href="#"><img src="" width="40px"></a>
+                    <a href="#"><img src="Facebook.png" width="40px"></a>
+                    <a href="#"><img src="Insta.jpeg" width="40px"></a>
+                    <a href="#"><img src="github.png" width="40px"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services" id="services"> <!-- Added ID for navigation -->
+        <div class="container">
+            <h1 class="services-head">Services</h1>
+            <p>All your digital needs... covered.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="Graphic.jpeg">
+                    <h2>Graphic Design</h2> <!-- Updated service name -->
+                    <p>Elevate your brand with stunning graphic designs. From logos to marketing materials, we've got
+                        you covered.</p>
+                </div>
+                <div class="card">
+                    <img src="Website.png">
+                    <h2>Web Development</h2>
+                    <p>Crafting interactive and responsive websites that bring your ideas to life. Your digital
+                        presence starts here.</p>
+                </div>
+                <div class="card">
+                    <img src="blogging.png">
+                    <h2>Content Writing</h2>
+                    <p>Captivating content tailored to your audience. Engage and inform with compelling storytelling
+                        and copy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="container">
+            <h1 class="services-head">My Works</h1>
+            <p>Embark on a visual journey through my creative endeavors, where each project tells a unique story of
+                innovation and passion.</p>
+            <div class="card-grid">
+                <div class="card" style="background-image: url('Image1.PNG'); background-size: cover;">
+                    <p></p>
+                </div>
+                <div class="card" style="background-image: url('Image2.PNG'); background-size: cover;">
+
+                </div>
+                <div class="card" style="background-image: url('Image3.PNG'); background-size: cover;">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <p>Ready to start your next project together? Feel free to reach out and let's create something amazing.</p>
+            <div class="contact-info">
+                <p>Email: hassanjabbar2017@gmail.com</p>
+                <p>Phone: 03327891339</p>
+            </div>
+        </div>
+    </section>
+    <!-- Add your work section here if needed -->
+</body>
+
+</html>
